@@ -1,0 +1,29 @@
+{
+  "name": "mid-term-gg3-gg3fsgp0488",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "nodemon ./src/bin/www.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rizkysr90/mid-term-gg3-GG3FSGP0488.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rizkysr90/mid-term-gg3-GG3FSGP0488/issues"
+  },
+  "homepage": "https://github.com/rizkysr90/mid-term-gg3-GG3FSGP0488#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+}
