@@ -23,6 +23,35 @@ Didalam collections Comments terdapat subdocuments yang menggunakan konsep refer
 }
 ```
 
+### GET /api/v1/videos/
+
+---
+
+(Thumbnail Video List)
+Returns all users in the system.
+
+- **URL Params**  
+   None
+- **Data Params**  
+  None
+- **Headers**  
+  Content-Type: application/json
+- **Success Response:**
+- **Code:** 200  
+  **Content:**
+
+```
+{
+	"metadata" : {
+		"status" : 200,
+		"msg": "berhasil mendapatkan data"
+	},
+	"data" : [
+			{VideosObject}
+	]
+}
+```
+
 ### GET /api/v1/videos/:videoId/products
 
 ---
