@@ -3,6 +3,10 @@ const responseModel = require("./../utilities/responseModel");
 const submit = async (req, res, next) => {
   try {
     // Validasi data
+    const { username, comment, videoId } = req.body;
+    if (!username || !comment || !videoId) {
+      responseModel.errors("mohon masukkan data yang lengkap", 400, {});
+    }
     const data = await commentServices.submit(req);
     return res
       .status(201)
