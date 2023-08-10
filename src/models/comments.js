@@ -1,21 +1,20 @@
 const mongoose = require("mongoose");
-const Video = require("./videos");
-const comments = new mongoose.Schema({
-  comment: {
-    required: true,
-    type: String,
+const comments = new mongoose.Schema(
+  {
+    comment: {
+      required: true,
+      type: String,
+    },
+    video_id: {
+      type: mongoose.ObjectId,
+      ref: "videos",
+    },
+    user_id: {
+      type: mongoose.ObjectId,
+      ref: "users",
+    },
   },
-  video: {
-    type: mongoose.ObjectId,
-    ref: Video,
-  },
-  username: {
-    required: true,
-    type: String,
-  },
-  created_at: {
-    type: Date,
-  },
-});
+  { timestamps: { createDate: "created_at", updatedDate: "updated_at" } }
+);
 
-module.exports = mongoose.model("Comments", comments);
+module.exports = mongoose.model("comments", comments);

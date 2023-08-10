@@ -7,7 +7,7 @@ const seedData = [
       username: "Kahf Official",
       avatar_url:
         "https://ik.imagekit.io/rizkysr90/7e471c19-c137-4d4d-b9b6-5ff79d1d959e_BH5UBIhQs.jpeg",
-      url: "https://www.tokopedia.com/kahfofficial",
+      store_url: "https://www.tokopedia.com/kahfofficial",
     },
     video_url: "https://www.youtube.com/embed/RLZcPLx84Yk",
     products: [
@@ -38,7 +38,7 @@ const seedData = [
       username: "GadgetIn",
       avatar_url:
         "https://images.tokopedia.net/img/cache/215-square/GAnVPX/2023/5/27/43f2256f-5ec9-4ba6-bb13-3bab13848399.jpg",
-      url: "https://www.tokopedia.com/pizzagadgetofficial",
+      store_url: "https://www.tokopedia.com/pizzagadgetofficial",
     },
     video_url: "https://www.youtube.com/embed/GKSWzJmZLjw",
     products: [
