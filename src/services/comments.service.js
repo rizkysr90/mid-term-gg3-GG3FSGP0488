@@ -1,11 +1,11 @@
-const Comment = require("./../models/comments.js");
+const Comment = require("../models/comment.model.js");
 
 const submit = async (req) => {
-  const { username, comment, videoId } = req.body;
+  const { username, comment, video_id } = req.body;
 
   const newComments = new Comment({
     comment,
-    video: videoId,
+    video_id: video_id,
     username,
     created_at: new Date(),
   });
@@ -13,7 +13,7 @@ const submit = async (req) => {
   return creationTask.id;
 };
 const getAll = async (req) => {
-  const comments = await Comment.find({ video: req.params?.videoId }, [
+  const comments = await Comment.find({ video_id: req.params?.video_id }, [
     "comment",
     "username",
   ]);

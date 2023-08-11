@@ -9,9 +9,9 @@ const comments = new mongoose.Schema(
       type: mongoose.ObjectId,
       ref: "videos",
     },
-    user_id: {
-      type: mongoose.ObjectId,
-      ref: "users",
+    username: {
+      required: true,
+      type: String,
     },
   },
   { timestamps: { createDate: "created_at", updatedDate: "updated_at" } }

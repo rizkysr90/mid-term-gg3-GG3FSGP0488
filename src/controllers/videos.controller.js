@@ -1,9 +1,9 @@
 const videosService = require("./../services/videos.service");
 const responseModel = require("./../utilities/responseModel");
-const getAll = async (req, res, next) => {
+const getVideos = async (req, res, next) => {
   try {
     // Validasi data
-    const data = await videosService.getAll(req);
+    const data = await videosService.getVideos(req);
     return res
       .status(200)
       .json(responseModel.success("berhasil mendapatkan data", data, 200));
@@ -11,9 +11,9 @@ const getAll = async (req, res, next) => {
     next(error);
   }
 };
-const getProducts = async (req, res, next) => {
+const getVideo = async (req, res, next) => {
   try {
-    const data = await videosService.getProducts(req);
+    const data = await videosService.getVideo(req);
     return res
       .status(200)
       .json(responseModel.success("berhasil mendapatkan data", data, 200));
@@ -21,6 +21,6 @@ const getProducts = async (req, res, next) => {
 };
 
 module.exports = {
-  getAll,
-  getProducts,
+  getVideos,
+  getVideo,
 };

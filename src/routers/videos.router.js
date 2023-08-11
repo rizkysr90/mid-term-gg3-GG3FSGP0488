@@ -1,5 +1,5 @@
 const router = require("express").Router();
 const videosController = require("./../controllers/videos.controller");
-router.get("/", videosController.getAll);
-router.get("/:videoId/products", videosController.getProducts);
+router.get("/", videosController.getVideos);
+router.get("/:video_id", videosController.getVideo);
 module.exports = router;
