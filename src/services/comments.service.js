@@ -16,6 +16,7 @@ const getAll = async (req) => {
   const comments = await Comment.find({ video_id: req.params?.video_id }, [
     "comment",
     "username",
+    "createdAt",
   ]);
   return comments;
 };

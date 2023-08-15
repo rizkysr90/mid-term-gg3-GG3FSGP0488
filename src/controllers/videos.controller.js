@@ -1,5 +1,5 @@
 const videosService = require("./../services/videos.service");
-const responseModel = require("./../utilities/responseModel");
+const responseModel = require("../utilities/responseModel.utility");
 const getVideos = async (req, res, next) => {
   try {
     // Validasi data

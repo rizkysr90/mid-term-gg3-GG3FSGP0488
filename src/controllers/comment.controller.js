@@ -1,5 +1,5 @@
 const commentServices = require("./../services/comments.service");
-const responseModel = require("./../utilities/responseModel");
+const responseModel = require("../utilities/responseModel.utility");
 const submit = async (req, res, next) => {
   try {
     // Validasi data
