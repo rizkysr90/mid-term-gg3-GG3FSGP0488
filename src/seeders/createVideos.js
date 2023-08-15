@@ -14,30 +14,22 @@ const {
   sellerProducts: bProducts,
   sellerVideo: bVideo,
 } = require("./sellers/2_SellerData");
-const creationFirstSeller = async () => {
-  let insertedVideoData = aVideo;
-  // add subdocuments seller into video collections
-  insertedVideoData = { ...insertedVideoData, seller: a };
-  console.log("Ini data videonya", insertedVideoData);
-  const creationVideo = await Video.create(insertedVideoData);
-  console.log("Ini response create video", creationVideo);
-  console.log("Ini id videonya", creationVideo._id);
-  let insertedProductsData = aProducts.map((product) => {
-    // Add live_videos field for refrences video collections to this product document
-    return { ...product, live_videos: [creationVideo._id] };
-  });
-  const creationProducts = await Product.insertMany(insertedProductsData);
-  console.log("Ini response create product", creationProducts);
-  const createdProductsId = creationProducts.map((product) => {
-    return product._id;
-  });
-  // Add products field for refrences products collections to the video document
-  const updatedVideo = await Video.updateOne(
-    { _id: creationVideo._id },
-    { products: createdProductsId }
-  );
-  console.log("Ini response update video", updatedVideo);
-};
+const {
+  seller: c,
+  sellerProducts: cProducts,
+  sellerVideo: cVideo,
+} = require("./sellers/3_SellerData");
+const {
+  seller: d,
+  sellerProducts: dProducts,
+  sellerVideo: dVideo,
+} = require("./sellers/4_SellerData");
+const {
+  seller: e,
+  sellerProducts: eProducts,
+  sellerVideo: eVideo,
+} = require("./sellers/5_SellerData");
+
 const creationSeller = async (video, seller, products) => {
   let insertedVideoData = video;
   // add subdocuments seller into video collections
@@ -65,7 +57,12 @@ const creationSeller = async (video, seller, products) => {
 const creationOfSeeder = async () => {
   try {
     // await creationFirstSeller();
+    await creationSeller(aVideo, a, aProducts);
     await creationSeller(bVideo, b, bProducts);
+    await creationSeller(cVideo, c, cProducts);
+    await creationSeller(dVideo, d, dProducts);
+    await creationSeller(eVideo, e, eProducts);
+
     console.log(`Success creation`);
     mongoose.disconnect(); // Disconnect from the database after seeding
   } catch (error) {

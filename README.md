@@ -215,7 +215,6 @@ Jika kamu ingin menjalankan proyek ini di local komputer kamu, yang pertama yait
     ```
     PORT=
     MONGO_URI=
-    ADMIN_PASSWORD=
     ```
     - PORT diisi dengan alamat port yang akan digunakan untuk menjalankan API backend pada local komputer kamu.
     - MONGO_URI adalah alamat mongoDB kamu, biasanya formatnya sepert `'mongodb://host:port/namaDB'`
